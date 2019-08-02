@@ -1,29 +1,62 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Hank Quinlan, Horrible Cop</title>
-		<link rel="stylesheet" type="text/css" href="/css/main.css">
-	</head>
-	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-        		<li><a href="/cv">CV</a></li>
-        		<li><a href="/blog">Blog</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-    		<div class="blurb">
-        		<h1>Hi there, I'm Hank Quinlan!</h1>
-				<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-			</ul>
-		</footer>
-	</body>
+    <head>
+        <title>RC Demo Webpage</title>
+    </head>
+    <style>
+    * {
+      box-sizing: border-box;
+    }
+    .column {
+      float: left;
+      padding: 10px;
+      height: 500px;
+    }
+    .left {
+      width: 220px;
+    }
+    .right {
+      width: 75%;
+    }
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .button {
+        background-color: #e4e9f2;
+        border: none;
+        color: black;
+        padding: 3px 3px;
+        text-align: center;
+        font-size: 12px;
+        cursor: pointer;
+        width: 200px
+    }
+    .button:hover {
+        background-color: grey;
+    }
+    </style>
+    <body>
+        <div class="row">
+            <div class="column left" style="background-color: #aaa">
+                <h2>Main Controls</h2>
+                <button class="button" onclick='toggleState("s1")'>External Servo On</button>
+            </div>
+            <div class="column right" style="background-color: #bbb">
+                <h2>Signal Readback</h2>
+                <p id="s1">False</p>
+            </div>
+        </div>
+        <script type="text/javascript">
+            function toggleState(param) {
+                var status = document.getElementById(param).innerHTML
+                if (status == 'False') {
+                    document.getElementById(param).innerHTML = "True"
+                } else {
+                    document.getElementById(param).innerHTML = "False"
+                }
+            }
+        </script>
+    </body>
 </html>
