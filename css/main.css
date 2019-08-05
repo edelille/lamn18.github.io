@@ -20,12 +20,11 @@ a:hover {
     text-decoration: underline;
 }
 h1 {
-    font-size: 3em;
+    font-size: 30px;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 p {
-    font-size: 1.5em;
-    line-height: 1.4em;
+    font-size: 20px;
     color: #333;
 }
 footer {
@@ -44,32 +43,62 @@ ul.posts li {
 * {
   box-sizing: border-box;
 }
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+td {
+  height: 25px;
+  width: 120px;
+  text-align: center;
+  background-color: #e4e9f2;
+  font-size: 14px;
+  padding: 3px 3px;
+}
+.statuswindow {
+  float: right;
+}
+.toplayout {
+  float:left;
+}
 .column {
   float: left;
   padding: 10px;
-  height: 500px;
 }
 .left {
-  width: 220px;
+  width: 22%;
+}
+.middle {
+  width: 19%;
 }
 .right {
-  width: 75%;
-  line-height: 0px;
+  width: 59%;
 }
 .row:after {
   content: "";
   display: table;
   clear: both;
+  padding-bottom: 10px;
 }
 .button {
     background-color: #e4e9f2;
     color: black;
-    padding: 3px 3px;
     text-align: center;
     font-size: 12px;
     cursor: pointer;
-    width: 200px
+}
+.maincontrol {
+  padding: 3px 3px;
+  width: 200px
+}
+.oneclick {
+  padding: 3px 3px;
+  width: 100px;
+  height: 25px;
 }
 .button:hover {
     background-color: grey;
+}
+.ignore-css {
+  all:unset;
 }
